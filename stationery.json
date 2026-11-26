@@ -1,0 +1,59 @@
+{
+  "mode": "synthetic test harness (no LangGraph/Ollama)",
+  "single": {
+    "draft": "revenue=17000\nprofit=9401\nДействия: Проверить ассортимент",
+    "feedback": [
+      "Требуется строка profit=9400",
+      "Не отражен риск: Блокнот"
+    ],
+    "attempts": 1
+  },
+  "multi": {
+    "path": "data/stationery.csv",
+    "question": "Как повысить валовую прибыль и снизить риски?",
+    "attempts": 2,
+    "feedback": [],
+    "log": [
+      "Аналитик -> Консультант: CSV прочитан, показатели рассчитаны",
+      "Консультант -> Аудитор: версия 1",
+      "Аудитор -> Консультант: Требуется строка profit=9400; Не отражен риск: Блокнот",
+      "Консультант -> Аудитор: версия 2",
+      "Аудитор -> END: принято"
+    ],
+    "metrics": {
+      "revenue": 17000,
+      "profit": 9400,
+      "items": [
+        {
+          "product": "Блокнот",
+          "units": 80,
+          "price": 150,
+          "cost": 70,
+          "stock": 10,
+          "revenue": 12000,
+          "profit": 6400
+        },
+        {
+          "product": "Ручка",
+          "units": 100,
+          "price": 50,
+          "cost": 20,
+          "stock": 100,
+          "revenue": 5000,
+          "profit": 3000
+        }
+      ],
+      "risks": [
+        "Блокнот"
+      ]
+    },
+    "draft": "revenue=17000\nprofit=9400\nДействия: Проверить Блокнот",
+    "approved": true
+  },
+  "comparison": {
+    "single_pass": false,
+    "multi_pass": true,
+    "single_calls": 1,
+    "multi_calls": 2
+  }
+}

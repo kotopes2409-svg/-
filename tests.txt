@@ -1,0 +1,9 @@
+test_baseline (test_app.Test.test_baseline) ... ok
+test_feedback (test_app.Test.test_feedback) ... ok
+test_limit (test_app.Test.test_limit) ... ok
+test_metrics (test_app.Test.test_metrics) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK

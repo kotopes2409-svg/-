@@ -1,0 +1,59 @@
+{
+  "mode": "synthetic test harness (no LangGraph/Ollama)",
+  "single": {
+    "draft": "revenue=42000\nprofit=14501\nДействия: Проверить ассортимент",
+    "feedback": [
+      "Требуется строка profit=14500",
+      "Не отражен риск: Кабель"
+    ],
+    "attempts": 1
+  },
+  "multi": {
+    "path": "data/electronics.csv",
+    "question": "Как повысить валовую прибыль и снизить риски?",
+    "attempts": 2,
+    "feedback": [],
+    "log": [
+      "Аналитик -> Консультант: CSV прочитан, показатели рассчитаны",
+      "Консультант -> Аудитор: версия 1",
+      "Аудитор -> Консультант: Требуется строка profit=14500; Не отражен риск: Кабель",
+      "Консультант -> Аудитор: версия 2",
+      "Аудитор -> END: принято"
+    ],
+    "metrics": {
+      "revenue": 42000,
+      "profit": 14500,
+      "items": [
+        {
+          "product": "Кабель",
+          "units": 30,
+          "price": 200,
+          "cost": 250,
+          "stock": 40,
+          "revenue": 6000,
+          "profit": -1500
+        },
+        {
+          "product": "Мышь",
+          "units": 40,
+          "price": 900,
+          "cost": 500,
+          "stock": 30,
+          "revenue": 36000,
+          "profit": 16000
+        }
+      ],
+      "risks": [
+        "Кабель"
+      ]
+    },
+    "draft": "revenue=42000\nprofit=14500\nДействия: Проверить Кабель",
+    "approved": true
+  },
+  "comparison": {
+    "single_pass": false,
+    "multi_pass": true,
+    "single_calls": 1,
+    "multi_calls": 2
+  }
+}

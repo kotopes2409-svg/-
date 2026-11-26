@@ -1,0 +1,59 @@
+{
+  "mode": "synthetic test harness (no LangGraph/Ollama)",
+  "single": {
+    "draft": "revenue=42000\nprofit=18001\nДействия: Проверить ассортимент",
+    "feedback": [
+      "Требуется строка profit=18000",
+      "Не отражен риск: Кофе"
+    ],
+    "attempts": 1
+  },
+  "multi": {
+    "path": "data/cafe.csv",
+    "question": "Как повысить валовую прибыль и снизить риски?",
+    "attempts": 2,
+    "feedback": [],
+    "log": [
+      "Аналитик -> Консультант: CSV прочитан, показатели рассчитаны",
+      "Консультант -> Аудитор: версия 1",
+      "Аудитор -> Консультант: Требуется строка profit=18000; Не отражен риск: Кофе",
+      "Консультант -> Аудитор: версия 2",
+      "Аудитор -> END: принято"
+    ],
+    "metrics": {
+      "revenue": 42000,
+      "profit": 18000,
+      "items": [
+        {
+          "product": "Кофе",
+          "units": 100,
+          "price": 300,
+          "cost": 180,
+          "stock": 20,
+          "revenue": 30000,
+          "profit": 12000
+        },
+        {
+          "product": "Чай",
+          "units": 60,
+          "price": 200,
+          "cost": 100,
+          "stock": 50,
+          "revenue": 12000,
+          "profit": 6000
+        }
+      ],
+      "risks": [
+        "Кофе"
+      ]
+    },
+    "draft": "revenue=42000\nprofit=18000\nДействия: Проверить Кофе",
+    "approved": true
+  },
+  "comparison": {
+    "single_pass": false,
+    "multi_pass": true,
+    "single_calls": 1,
+    "multi_calls": 2
+  }
+}
